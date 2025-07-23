@@ -345,6 +345,7 @@ fi
 echo "一旦执行该脚本就会立即清空iptables input链规则"
 echo "请确保无其他程序依赖iptables input链"
 echo "以免发生网络异常"
+echo "可执行 sudo iptables -S INPUT 查看iptables input链当前情况"
 
 while true; do
   read -p "是否继续? [y/Y]: " input  # 提示用户输入
