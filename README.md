@@ -27,17 +27,18 @@
 通过修改iptables input链规则来放行传入端口与网段
 
 ### 警告
-一旦执行该脚本就会立即清空iptables input链，请确保iptables input链为空或者仅包含本脚本添加的规则，以免网络发送异常
+一旦执行该脚本就会立即清空iptables input链规则（不会操作output链，forward链），请确保无其他程序依赖iptables input链，以免网络发送异常
 
-执行`sudo iptables -S INPUT`查看iptables input链
+可执行`sudo iptables -S INPUT`查看iptables input链当前情况
 
 ### 原理
 1. 启动脚本后会将iptables input链清空
-2. 创建/etc/iptables-manager文件夹，用于存放规则文件
-3. 重新加载/etc/iptables-manager下的规则到iptables input链
-4. 启动cui 菜单界面
-5. 保存新的规则并添加systemctl服务开机自启动
-6. 重新加载规则到iptables input链
+2. 将input设置为drop, 放行icmp, 放行已建立的连接
+3. 创建/etc/iptables-manager文件夹，用于存放规则文件
+4. 重新加载/etc/iptables-manager下的规则到iptables input链
+5. 启动cui 菜单界面
+6. 保存新的规则并添加systemctl服务开机自启动
+7. 重新加载规则到iptables input链
 
 ### CUI 菜单界面
 
