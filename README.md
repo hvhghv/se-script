@@ -116,10 +116,10 @@
 
 ```
 用法:
-  screen-tool.sh write <name> <command>  向名称为name的screen终端写入命令（不存在则创建）（自动添加换行符\n）
-  screen-tool.sh read <name>             读取名称为name的screen终端当前所有输出
-  screen-tool.sh del <name>              关闭名称为name的screen终端
-  screen-tool.sh ls                      列出所有screen终端
+  screen-tool.sh write <name> <command>  向名称为name的screen会话写入命令（不存在则创建）（自动添加换行符\n）
+  screen-tool.sh read <name>             读取名称为name的screen会话当前所有输出
+  screen-tool.sh del <name>              关闭名称为name的screen会话
+  screen-tool.sh ls                      列出所有screen会话
   screen-tool.sh [-h|--help]             显示此帮助信息
 
 示例:
