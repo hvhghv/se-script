@@ -27,7 +27,7 @@
 通过修改iptables input链规则来放行传入端口与网段
 
 ### 警告
-一旦执行该脚本就会立即清空iptables input链，请保证iptables input链为空或者仅包含本脚本添加的规则，以免网络发送异常
+一旦执行该脚本就会立即清空iptables input链，请确保iptables input链为空或者仅包含本脚本添加的规则，以免网络发送异常
 
 执行`sudo iptables -S INPUT`查看iptables input链
 
