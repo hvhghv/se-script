@@ -65,7 +65,7 @@
 快速创建systemctl自启动服务
 
 ### 使用方式
-1. (非必须)复制整个模版文件夹到随便一个地方并进入复制后的文件夹
+1. (非必须)复制`linux-systemctl-template`到随便一个地方并进入复制后的文件夹
 2. 重命名`./system/conf`为`xxx`(`xxx`自己随便起一个名)
 3. 打开`./system/xxx`, 根据里面的注释来修改（一般只需修改`Type`，`WorkingDirectory`，`ExecStart`就行）
 4. (非必须) 如需要添加环境变量，则往`./env/env`里添加环境变量就行
