@@ -342,6 +342,26 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
+echo "一旦执行该脚本就会立即清空iptables input链规则"
+echo "请确保无其他程序依赖iptables input链"
+echo "以免发生网络异常"
+
+while true; do
+  read -p "是否继续? [y/Y]: " input  # 提示用户输入
+  case "$input" in
+    [yY])   # 匹配 y 或 Y
+      echo "继续执行..."
+      break  # 跳出循环继续执行后续代码
+      ;;
+    "")     # 匹配空输入
+      ;;
+    *)      # 匹配其他任何字符
+      echo "输入错误，退出!"
+      exit 1  # 立即退出脚本
+      ;;
+  esac
+done
+
 # 初始化配置和环境
 init_config
 init_firewall
