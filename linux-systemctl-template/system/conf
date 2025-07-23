@@ -21,7 +21,7 @@ Type=simple
 WorkingDirectory=/your/workdir/path
 
 ;程序路径
-ExecStart=echo ${Description}
+ExecStart=echo ${EXAMPLE_ENV_1}
 
 ;程序restart时执行，非必须
 ;ExecReload=
