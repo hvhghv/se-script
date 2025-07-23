@@ -113,17 +113,17 @@
 
 用于简化screen操作
 
-用法:
-  screen-tool.sh write <name> <command>  向名称为name的screen终端写入命令（不存在则创建）（自动添加换行符\n）
-  screen-tool.sh read <name>             读取名称为name的screen终端当前所有输出
-  screen-tool.sh del <name>              关闭名称为name的screen终端
-  screen-tool.sh ls                      列出所有screen终端
-  screen-tool.sh [-h|--help]             显示此帮助信息
+### 用法:
+- screen-tool.sh write <name> <command>  向名称为name的screen终端写入命令（不存在则创建）（自动添加换行符\n）
+- screen-tool.sh read <name>             读取名称为name的screen终端当前所有输出
+- screen-tool.sh del <name>              关闭名称为name的screen终端
+- screen-tool.sh ls                      列出所有screen终端
+- screen-tool.sh [-h|--help]             显示此帮助信息
 
-示例:
-  screen-tool.sh write myterm "ls -l"
-  screen-tool.sh read myterm
-  screen-tool.sh del myterm
+### 示例:
+- screen-tool.sh write myterm "ls -l"
+- screen-tool.sh read myterm
+- screen-tool.sh del myterm
 
 
 ### screen-tool.sh write
