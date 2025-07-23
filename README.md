@@ -1,5 +1,5 @@
 # se-script
-分享一些个人用脚本
+分享一些个人编写（AI编写）或改良的脚本
 
 ## 用户管理
 [脚本](./linux-user-manager/user-manager.sh)
