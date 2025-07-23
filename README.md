@@ -69,7 +69,7 @@
 4. (非必须) 如需要添加环境变量，则往`./env/env`里添加环境变量就行
 5. 运行`./ser.sh`即可（会自动执行systemctl enable xxx; systemctl start xxx）
 6. (非必须) 可通过`systemctl status xxx`查看服务状态
-7. (非必须) 后续若要修改服务内容，重复3-6即可
+7. (非必须) 后续若要修改服务内容，先执行`./ser.sh clean`, 之后重复3-6即可
 8. (非必须) 若需要删除该服务, 执行`./ser.sh clean`
 
 ### 原理
