@@ -1,0 +1,33 @@
+;安装
+
+[Unit]
+;描述，非必须
+;Description=""
+
+;在网络启动后才执行该脚本。除非有啥依赖，一般不用改。
+After=network.target
+
+[Service]
+
+;simple  用于执行程序会导致阻塞情况
+;forking 用于执行程序会不会阻塞情况
+Type=simple 
+;Type=forking
+
+;以什么用户来启动，非必须
+;User=root
+
+;程序工作路径
+WorkingDirectory=/your/workdir/path
+
+;程序路径
+ExecStart=echo ${Description}
+
+;程序restart时执行，非必须
+;ExecReload=
+
+;程序stop时执行，非必须
+;ExecStop=
+
+
+
