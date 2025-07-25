@@ -60,7 +60,7 @@
 - 添加好可执行权限后直接运行即可
 
 ## systemctl服务模版
-[脚本路径](./systemctl-service-template)
+[脚本路径](./linux-systemctl-template)
 
 快速创建systemctl自启动服务
 
