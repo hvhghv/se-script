@@ -134,3 +134,34 @@
 ### screen-tool.sh read
 读取名称为name的screen终端当前所有输出
 
+## 终端剪切板
+
+[脚本](./linux-terminal-clipboard/terminal-clipboard.sh)
+
+类似于剪切板一样，在同一台Linux主机上，向a终端的输入内容会展示在a,b,c,d,e,f终端上。b终端的输入内容会展示在a,b,c,d,e,f终端上，以用于在不同的终端间共享信息。
+
+这个是我在运行虚拟机时获得的灵感。在一个场景中，宿主机无法直接将大量数据直接通过CTRL+C/CTRL+V复制到虚拟机内部，虚拟机也同样无法将大片内容直接复制到宿主机里，手动一个一个敲上去又不太现实。正好宿主机可以通过ssh互相连接。此时，宿主机通过ssh新建一个终端并运行该脚本，虚拟机也开一个桌面终端并运行该脚本。复制的内容输入到a终端，b终端就能立马显示，就解决这个问题。
+
+### 特点
+- 支持多个终端绑定同一个name上。每个终端既可以展示内容，也可以直接当作输入源。
+- 数据会保存在/tmp/terminal_chat_\<name\>/chat.log上，可随时查看（注意，不会手动清除）
+
+### 用法
+```
+./terminal-clipboard.sh <name> // 随便起一个名字就好。但注意只有相同name的终端才会展示相同的内容。
+
+//示例
+
+// a终端
+./terminal-clipboard.sh test
+
+// b终端
+./terminal-clipboard.sh test
+
+// c终端
+./terminal-clipboard.sh test
+
+// 此时往a终端输入hello world, 回车
+
+a,b,c终端均会显示hello world
+```
